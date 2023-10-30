@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="company-logo">IcedSparrow</div>
+        <nav class="navbar">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="game.html" class="nav-link">Game</a></li>
+            <!--<li class="nav-item"><a href="#" class="nav-link">SHOP</a></li>-->
+            <li class="nav-item"><a href="Kontakt.html" class="nav-link">Kontakt</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+          <i class="bx bx-menu"></i>
+          <i class="bx bx-x"></i>
+        </div>
+      </header>
+    <main>
+        <div class="vid-container">
+            <link rel="stylesheet" href="tlokontakt.css">
+            <video id="Video1" class="bgvid back" autoplay="true" muted="muted" preload="auto" loop>
+                <source src="zd/Projekt bez nazwy.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="container">
+            <div id="contact" class="formBtn">Contact</div>
+            <div id="contactForm">
+                <h1 style="margin-bottom: 10px;">Keep in touch</h1>
+                <form action="https://formspree.io/f/mgejdnav" method="POST">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" required><br>
+                    <label for="email">Your email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="message">Your message:</label><br>
+                    <textarea id="message" name="message" required></textarea><br>
+                    <input type="checkbox" name="privacy_policy" id="privacy_policy" required />
+                    <label for="privacy_policy">
+                        I accept the <a href="https://www.termsfeed.com/live/6afbba86-125c-4b7e-9149-94e2230c0eda" target="_blank">Privacy Policy</a>
+                    </label><br>
+                    <button class="formBtn" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        
+        <div class="container end-footer">
+            <div class="copyright">copyright © 2023 -ZegarkiDawida  • <b>Dawid Wróbel</b></div>
+            <a class="designer" href="#">Dawid Wróbel</a>
+        </div>
+    </footer>
+    <script src="/js/main.js"></script>
+    <script>
+        $(function() {
+            $('#contact').click(function() {
+                $('#contactForm').fadeToggle();
+            });
+            $(document).mouseup(function(e) {
+                var container = $("#contactForm");
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    container.fadeOut();
+                }
+            });
+        });
+    </script>
+    <style>
+        @import "https://fonts.googleapis.com/css?family=Poppins";
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0f0c29;
+            font-family: Poppins;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+        h1 {
+            margin: 0;
+        }
+        #contact {
+            margin: 4em auto;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            font-weight: 700;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid white;
+        }
+        #contact:hover {
+            background: #000000;
+        }
+        #contact:active {
+            background: #444;
+        }
+        #contactForm {
+            display: none;
+            border: 6px solid #3324be;
+            padding: 2em;
+            width: 400px;
+            text-align: center;
+            background: #fff;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            border-radius: 16px;
+        }
+        input,
+        textarea {
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border-radius: 15px;
+        }
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+        .formBtn {
+            outline: 0;
+            background: #3324be;
+            width: 140px;
+            height: 30px;
+            border: 0;
+            color: #ffffff;
+            font-size: 1.2em;
+            border-radius: 15px;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>
